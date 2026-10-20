@@ -1,6 +1,6 @@
 # Mealy Machine: Tracking Symbols Inside C-Style Comments
 
-**JM Marvie Brizuela**
+**Name: JM Marvie Brizuela**
 
 This Mealy machine, implemented in C, labels every input symbol according to whether it falls inside a C-style comment. The inputs are `j`, `m`, `*` and `/`, with `j` and `m` representing any character that is not `*` or `/`. The outputs are the bits `0` and `1`.
 
