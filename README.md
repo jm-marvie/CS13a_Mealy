@@ -26,8 +26,8 @@ Q  = { q0, q1, q2, q3 }
 Σ  = { j, m, *, / }
 Δ  = { 0, 1 }
 q0 = q0
-δ  : Q × Σ → Q        (gives the next state)
-λ  : Q × Σ → Δ        (gives the output bit for each move)
+δ  : Q × Σ → Q      
+λ  : Q × Σ → Δ      
 ```
 
 Output rule: `λ = 1` when the machine is inside a comment after the move, and `λ = 0` when it is outside.
@@ -35,8 +35,6 @@ Output rule: `λ = 1` when the machine is inside a comment after the move, and `
 ## State Diagram
 
 ![Mealy Machine Diagram](mealy_diagram.png)
-
-Each arrow carries the label `input | output`.
 
 ## Transition Table
 
@@ -46,8 +44,6 @@ Each arrow carries the label `input | output`.
 | q1 | q0 | 0 | q0 | 0 | q2 | 1 | q1 | 0 |
 | q2 | q2 | 1 | q2 | 1 | q3 | 1 | q2 | 1 |
 | q3 | q2 | 1 | q2 | 1 | q3 | 1 | q0 | 0 |
-
-The arrow `→` points at the start state. For each input symbol, the first column is the state reached and the second is the bit printed.
 
 ## δ and λ Equations
 
@@ -80,7 +76,6 @@ The arrow `→` points at the start state. For each input symbol, the first colu
 | `/*j` | `011` | q2 |
 | `/*/` | `011` | q2 |
 
-Ending in q0 or q1 means the string stops outside a comment. Ending in q2 or q3 means a comment was started but never finished.
 
 Note that the opening `/` gives `0` while the `*` right after it gives `1`, and the closing `/` gives `0`. The machine cannot tell that a `/` begins a comment until the next `*` arrives, so the first `1` appears one symbol late.
 
