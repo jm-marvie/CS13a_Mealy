@@ -81,4 +81,5 @@ Note that the opening `/` gives `0` while the `*` right after it gives `1`, and 
 
 ## Handwritten
 
-![Handwritten Work](handwritten.jpg)
+![Handwritten Work](handwritten1.jpg)
+![Handwritten Work](handwritten2.jpg)
